@@ -27,7 +27,7 @@ const App = () => {
 
     useEffect(() => {
         //fetch('http://10.0.0.112:8080/api/v1/maxhogs/merged')
-        fetch('https://maxhogs.herokuapp.com/api/v3/maxhogs/merged/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjIwNDAwYTliLTFkNzktNDhlMS1iYjY0LTkyMWNjNDc4MWU0YiIsImlhdCI6MTYxMTUyNDY0MSwic3ViIjoiZGV2ZWxvcGVyLzc0ODY0MGQxLTE0ZDktZGE4MS0wMjBjLWEwMGU2MGI2YzdjZSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyI1NC4yMTEuMTkuNjgiLCI1Mi4yMDIuMjE5LjE0Il0sInR5cGUiOiJjbGllbnQifV19.3WMiP8bphKBSRQwyJsX1wukU9ya5c2iTAjZ9aZhJ9nHU2nYpYf9eIUnTieeqwkgvjUbmiN8X6tvhV1RhMdRm_A')
+        fetch('https://maxhogs.herokuapp.com/api/v2/maxhogs/merged')
         .then(result => result.json())
         .then(rowData => setRowData(rowData))
     }, []);
