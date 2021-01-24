@@ -3,12 +3,15 @@ import React, { useState, useEffect } from 'react';
 
 import { Header, Image, Table, Card, Statistic} from 'semantic-ui-react';
 
+
+
 //import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 
 //import 'ag-grid-community/dist/styles/ag-grid.css';
 //import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
  
+
 
 
 
@@ -20,16 +23,11 @@ const App = () => {
    const [rowData, setRowData] = useState([]);
 
    //var json = fetch('http://localhost:8080/api/v1/maxhogs/clan');
-   
-
-   
-
-   
 
 
     useEffect(() => {
         //fetch('http://10.0.0.112:8080/api/v1/maxhogs/merged')
-        fetch('https://maxhogs.herokuapp.com/api/v3/maxhogs/merged/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjdlM2YxMjY1LTk5YmItNDM1Zi1iYmY5LTY2OGQzZDc3MzQxNiIsImlhdCI6MTYxMTUwNDQyNCwic3ViIjoiZGV2ZWxvcGVyLzc0ODY0MGQxLTE0ZDktZGE4MS0wMjBjLWEwMGU2MGI2YzdjZSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIzLjkzLjE5NS4xMjAiXSwidHlwZSI6ImNsaWVudCJ9XX0.A1sf5xSP9ytJ8w8SPcjB7vGjsr8GbxPiNk609m0OUTBUraT2cJ-wtWyN4Tml2A-tHCOZjVXs5fv-sO6zVVlkBQ')
+        fetch('https://maxhogs.herokuapp.com/api/v3/maxhogs/merged/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6Ijc5MzlhMmQwLTU1OTEtNGMxYy1hZjhjLWQ3MGRhODliYzU2ZSIsImlhdCI6MTYxMTUwNzQ4Mywic3ViIjoiZGV2ZWxvcGVyLzc0ODY0MGQxLTE0ZDktZGE4MS0wMjBjLWEwMGU2MGI2YzdjZSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyI1Mi4yMDIuMjE5LjE0Il0sInR5cGUiOiJjbGllbnQifV19.2ICAXzn8T8tF8LGKAFPipFaLJIrURxY0-s9xu6rVGMshn6x7o_Ht4lfSPYLAwazz1Jb73j3Oych0oIZyQ6G46Q')
         .then(result => result.json())
         .then(rowData => setRowData(rowData))
     }, []);
