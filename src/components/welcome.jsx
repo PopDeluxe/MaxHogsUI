@@ -34,7 +34,7 @@ return (
 
     <Header as='h3'>Hog Scores.  Say what?</Header>
     <p>Our clan seems to care the most about 2 things:  Donations and River Race participation.  
-        On the Hog Scores tab a Hog Score is calculated on a scale of 0-4 (4 good, 0 bad), which takes into account donations/river race stats.  
+        On the Hog Scores tab a "Hog Score" is calculated on a scale of 0-4 (4 good, 0 bad), which takes into account donations/river race stats.  
         The idea is to use this insight to help us better manage the clan in an easier way.</p> 
         <p><Message warning>
     
