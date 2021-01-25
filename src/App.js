@@ -49,13 +49,13 @@ const App = () => {
     <Table.Body>
       <Table.Row positive>
         <Table.Cell textAlign='right'>
-          200+ <Icon name='hand peace outline' />
+          200+ <Icon name='thumbs up outline' />
         </Table.Cell>
         <Table.Cell>4</Table.Cell>
       </Table.Row>
       <Table.Row positive>
         <Table.Cell textAlign='right'>
-          100 - 200 <Icon name='thumbs up outline' />
+          100 - 200 <Icon name='hand peace outline' />
         </Table.Cell>
         <Table.Cell>3</Table.Cell>
       </Table.Row>
