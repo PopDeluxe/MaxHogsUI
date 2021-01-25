@@ -1,16 +1,8 @@
-import { simpleHttpRequest } from 'ag-grid-community';
+
 import React, { useState, useEffect } from 'react';
 
-import { Header, Image, Table, Card, Statistic, Label, Grid, TableBody, Icon, TableRow} from 'semantic-ui-react';
+import { Header, Image, Table, Card, Statistic, Label, Grid, TableBody, Icon, TableRow, Tab} from 'semantic-ui-react';
 
-
-
-//import { AgGridColumn, AgGridReact } from 'ag-grid-react';
-
-//import 'ag-grid-community/dist/styles/ag-grid.css';
-//import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
-
- 
 
 
 
@@ -22,7 +14,8 @@ const App = () => {
 
    const [rowData, setRowData] = useState([]);
 
-   //var json = fetch('http://localhost:8080/api/v1/maxhogs/clan');
+
+
 
 
     useEffect(() => {
@@ -37,6 +30,10 @@ const App = () => {
     return (
 
         <div>
+
+
+
+
         <Grid divided='vertically'>
           <Grid.Row columns={4}>
           <Grid.Column>
@@ -158,7 +155,11 @@ const App = () => {
               
 
           <Grid.Column>
+          {/*
           <Image src='https://api-assets.clashroyale.com/cards/300/ASSQJG_MoVq9e81HZzo4bynMnyLNpNJMfSLb3hqydOw.png'/>
+          */}
+              <Image src={`${process.env.PUBLIC_URL}/images/puzzled.png`} size='small'/>
+
           </Grid.Column>
     </Grid.Row>
 
@@ -174,8 +175,8 @@ const App = () => {
                   <Card.Header>{row.name}</Card.Header>
                   <Card.Meta>{row.role}</Card.Meta>
                   <Card.Description>
-                    donations:  {row.donations}<br/>
-                    river fame:  {row.fame}<br/>
+                    donations:  {row.donations} {row.donations===0 ? <Icon name='attention' color='red'/> : ''}<br/>
+                    river fame:  {row.fame} {row.fame===0 ? <Icon name='attention' color='red'/> : ''}<br/>
                     boat repairs:  {row.repairs}<br/>
                     donations received:  {row.donationsReceived}<br/>
                     donation score:  {row.donationScore}<br/>
