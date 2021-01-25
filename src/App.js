@@ -165,7 +165,7 @@ const App = () => {
     <Grid.Row columns={1}>
       
       <Grid.Column>
-      <Card.Group>
+      <Card.Group centered>
             {rowData.map( (row) => 
 
               <Card >
