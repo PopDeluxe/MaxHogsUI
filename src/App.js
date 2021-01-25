@@ -1,7 +1,7 @@
 import { simpleHttpRequest } from 'ag-grid-community';
 import React, { useState, useEffect } from 'react';
 
-import { Header, Image, Table, Card, Statistic} from 'semantic-ui-react';
+import { Header, Image, Table, Card, Statistic, Label, Grid, TableBody, Icon, TableRow} from 'semantic-ui-react';
 
 
 
@@ -26,7 +26,7 @@ const App = () => {
 
 
     useEffect(() => {
-        //fetch('http://10.0.0.112:8080/api/v1/maxhogs/merged')
+        //fetch('http://localhost:8080/api/v1/maxhogs/merged')
         fetch('https://maxhogs.herokuapp.com/api/v2/maxhogs/merged')
         .then(result => result.json())
         .then(rowData => setRowData(rowData))
@@ -37,12 +37,135 @@ const App = () => {
     return (
 
         <div>
+        <Grid divided='vertically'>
+          <Grid.Row columns={4}>
+          <Grid.Column>
+
+          <Table basic='very' celled collapsing>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell>Donations</Table.HeaderCell>
+        <Table.HeaderCell>Donation Score</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+
+    <Table.Body>
+      <Table.Row positive>
+        <Table.Cell textAlign='right'>
+          200+ <Icon name='hand peace outline' />
+        </Table.Cell>
+        <Table.Cell>4</Table.Cell>
+      </Table.Row>
+      <Table.Row positive>
+        <Table.Cell textAlign='right'>
+          100 - 200 <Icon name='thumbs up outline' />
+        </Table.Cell>
+        <Table.Cell>3</Table.Cell>
+      </Table.Row>
+      <Table.Row positive>
+        <Table.Cell textAlign='right'>
+          50 - 100 <Icon name='hand peace outline' />
+        </Table.Cell>
+        <Table.Cell>2</Table.Cell>
+      </Table.Row>
+      <Table.Row warning>
+        <Table.Cell textAlign='right'>
+          {">"}0 - 50 <Icon name='thumbs down outline' />
+        </Table.Cell>
+        <Table.Cell>1</Table.Cell>
+      </Table.Row>
+      <Table.Row negative>
+        <Table.Cell textAlign='right'>
+          0 <Icon name='attention' />
+        </Table.Cell>
+        <Table.Cell>0</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+
+
+  
+          </Grid.Column>
+
+          <Grid.Column>
+          <Table basic='very' celled collapsing>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell>River Fame</Table.HeaderCell>
+        <Table.HeaderCell>Fame Score</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+
+    <Table.Body>
+      <Table.Row positive>
+        <Table.Cell textAlign='right'>
+          10,000+ <Icon name='hand peace outline' />
+        </Table.Cell>
+        <Table.Cell>4</Table.Cell>
+      </Table.Row>
+      <Table.Row positive>
+        <Table.Cell textAlign='right'>
+          5,000 - 10,00 <Icon name='thumbs up outline' />
+        </Table.Cell>
+        <Table.Cell>3</Table.Cell>
+      </Table.Row>
+      <Table.Row positive>
+        <Table.Cell textAlign='right'>
+          1,000 - 5,000 <Icon name='hand peace outline' />
+        </Table.Cell>
+        <Table.Cell>2</Table.Cell>
+      </Table.Row>
+      <Table.Row warning>
+        <Table.Cell textAlign='right'>
+          {">"}0 - 1,000 <Icon name='thumbs down outline' />
+        </Table.Cell>
+        <Table.Cell>1</Table.Cell>
+      </Table.Row>
+      <Table.Row negative>
+        <Table.Cell textAlign='right'>
+          0 <Icon name='attention' />
+        </Table.Cell>
+        <Table.Cell>0</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+          </Grid.Column>
+
+          <Grid.Column>
+
+          <Table basic='very' celled collapsing>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell>Hog Score</Table.HeaderCell>
         
+            </Table.Row>
+            </Table.Header>
 
-            
+            <Table.Body>
+      <Table.Row positive>
+        <Table.Cell textAlign='right'>
+          Avg(Donation Score + Fame Score)
+        </Table.Cell>
+
+      </Table.Row>
+ 
+    </Table.Body>
 
 
-            <Card.Group>
+          </Table>
+          
+          </Grid.Column>
+              
+
+          <Grid.Column>
+          <Image src='https://api-assets.clashroyale.com/cards/300/ASSQJG_MoVq9e81HZzo4bynMnyLNpNJMfSLb3hqydOw.png'/>
+          </Grid.Column>
+    </Grid.Row>
+
+    <Grid.Row columns={1}>
+      
+      <Grid.Column>
+      <Card.Group>
             {rowData.map( (row) => 
 
               <Card >
@@ -68,26 +191,12 @@ const App = () => {
               </Card>
               )}
             </Card.Group>
-
-            {/*
-            <AgGridReact 
-                rowData={rowData}>
-                
-                <AgGridColumn field="name" headerName="Name"></AgGridColumn>
-                <AgGridColumn field="role" headerName="Role" width="100" sortable></AgGridColumn>
-                <AgGridColumn field="expLevel" headerName="Exp Level" width="100" sortable></AgGridColumn>
-                
-                <AgGridColumn field="donations" headerName="donations" width="125" sortable></AgGridColumn>
-                <AgGridColumn field="donationsReceived" headerName="donationsReceived" sortable></AgGridColumn>
-                <AgGridColumn field="fame" headerName="River Fame" sortable></AgGridColumn>
-                <AgGridColumn field="repairs" headerName="Boat Repairs" sortable></AgGridColumn>
-                <AgGridColumn field="boatAttacks" headerName="Boat Attacks" sortable></AgGridColumn>
-
-            </AgGridReact>
-
-            */}
+      </Grid.Column>
+    </Grid.Row>
+  </Grid>
 
             
+
         </div>
     );
 };
