@@ -64,7 +64,7 @@ const App = () => {
       </Table.Row>
       <Table.Row positive>
         <Table.Cell textAlign='right'>
-          50 - 100 <Icon name='hand peace outline' />
+          50 - 100 <Icon name='hand lizard outline' />
         </Table.Cell>
         <Table.Cell>2</Table.Cell>
       </Table.Row>
@@ -111,7 +111,7 @@ const App = () => {
       </Table.Row>
       <Table.Row positive>
         <Table.Cell textAlign='right'>
-          1,000 - 5,000 <Icon name='hand peace outline' />
+          1,000 - 5,000 <Icon name='hand lizard outline' />
         </Table.Cell>
         <Table.Cell>2</Table.Cell>
       </Table.Row>
