@@ -38,7 +38,7 @@ return (
         The idea is to use this insight to help us better manage the clan in an easier way.</p> 
         <p><Message warning>
     
-    <p><b>please note:</b>  it takes a moment to calcualte the Hog Scores....so give it a few and hopefully it will render.  I will look into adding something that indicates it is working.</p>
+    <p><b>please note:</b>  it takes a moment to calculate the Hog Scores....so give it a few and hopefully it will render.  I will look into adding something that indicates it is working.</p>
   </Message></p>
 
 
