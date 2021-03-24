@@ -12,8 +12,8 @@ function HogScores (props){
     const [rowData, setRowData] = useState([]);
 
     useEffect(() => {
-        //fetch('http://localhost:8080/api/v1/maxhogs/merged')
-        fetch('https://maxhogs.herokuapp.com/api/v2/maxhogs/merged')
+        fetch('http://localhost:8080/api/v4/maxhogs/merged')
+        //fetch('https://maxhogs.herokuapp.com/api/v2/maxhogs/merged')
         .then(result => result.json())
         .then(rowData => setRowData(rowData))
     }, []);
@@ -22,8 +22,6 @@ function HogScores (props){
 
 
 return (
-
-
     <Grid.Row columns={1}>
       
     <Grid.Column>
@@ -36,13 +34,13 @@ return (
                 <Card.Header>{row.name}</Card.Header>
                 <Card.Meta>{row.role}</Card.Meta>
                 <Card.Description>
-                  donations:  {row.donations} {row.donations===0 ? <Icon name='attention' color='red'/> : ''}<br/>
-                  river fame:  {row.fame} {row.fame===0 ? <Icon name='attention' color='red'/> : ''}<br/>
+                  donations:  {row.donations} {row.donations===0 ? <Icon name='attention' color='red'/> : ''}<br/>  
                   boat repairs:  {row.repairs}<br/>
                   donations received:  {row.donationsReceived}<br/>
                   donation score:  {row.donationScore}<br/>
                   fame score:  {row.riverScore}<br/>
-                  unrounded hog score: {row.unroundedHogScore}<br/>
+                  river attacks: {row.currentRiverAttacks} {row.currentRiverAttacks===0 ? <Icon name='attention' color='red'/> : ''}<br/>
+                  
                   <Statistic.Group>
                     <Statistic>
                     <Statistic.Label>Hog Score</Statistic.Label><Statistic.Value>{row.hogScore}</Statistic.Value>

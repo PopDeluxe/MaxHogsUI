@@ -15,7 +15,7 @@ const panes = [
         ,
   { menuItem: 'Hog Scores', render: () => 
         <Tab.Pane>
-            <Grid divided='vertically'>
+            <Grid  divided='vertically'>
                 <HogScoreMatrix/>
                 <HogScores/>
             </Grid>
