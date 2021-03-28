@@ -32,10 +32,8 @@ return (
     <p>PopDeluxe here.  Hope all is well out there!  I've started this site just for fun....I have an interest in web development so I figured this would be a fun side project to get into.  
         But perhaps this can also become a useful tool for us as well.</p>
 
-    <Header as='h3'>Hog Scores.  Say what?</Header>
-    <p>Our clan seems to care the most about 2 things:  Donations and River Race participation.  
-        On the Hog Scores tab a "Hog Score" is calculated on a scale of 0-4 (4 good, 0 bad), which takes into account donations/river race stats.  
-        The idea is to use this insight to help us better manage the clan in an easier way.</p> 
+    <Header as='h3'>Hog Scores</Header>
+    <p>Since we're trying to become a war clan, this is a simple way of tracking clan participation on the river</p> 
         <p><Message warning>
     
     <p><b>please note:</b>  it takes a moment to calculate the Hog Scores....so give it a few and hopefully it will render.  I will look into adding something that indicates it is working.</p>
