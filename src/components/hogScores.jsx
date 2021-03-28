@@ -12,8 +12,8 @@ function HogScores (props){
     const [rowData, setRowData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/v4/maxhogs/merged')
-        //fetch('https://maxhogs.herokuapp.com/api/v2/maxhogs/merged')
+        //fetch('http://localhost:8080/api/v4/maxhogs/merged')
+        fetch('https://maxhogs.herokuapp.com/api/v4/maxhogs/merged')
         .then(result => result.json())
         .then(rowData => setRowData(rowData))
     }, []);
